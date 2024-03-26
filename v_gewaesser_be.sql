@@ -1,4 +1,4 @@
-DROP VIEW IF EXISTS views.v_gewaesser_be; 
+--DROP VIEW IF EXISTS views.v_gewaesser_be; 
 
 CREATE VIEW  views.v_gewaesser_be  AS
 
