@@ -93,7 +93,7 @@ LEFT JOIN ax_strasse ON ax_strasse.gml_id = ANY(fahrstrasse_union.istteilvon)
 
 RIGHT JOIN (			
 	SELECT ogc_fid, gml_id, zustand, bezeichnung, name, durchfahrtshoehe, breitedesobjekts, bauwerksfunktion
---				, objekthoehe 																		-- ab ATKIS-OK 7.1.0 
+--				, objekthoehe 										-- ab ATKIS-OK 7.1.0 
 	FROM ax_bauwerkimverkehrsbereich 
 		WHERE bauwerksfunktion IN (1800, 1801, 1802, 1803, 1804, 1805, 1806, 1807, 1808, 1830) 
 ) AS tunnel_join ON tunnel_join.gml_id = any(fahrstrasse_union.hatdirektunten)
